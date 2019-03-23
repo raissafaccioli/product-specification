@@ -1,0 +1,17 @@
+.product{
+  padding: 10px;
+  
+  &__title {
+    margin-bottom: 20px;
+    font-weight: bolder;
+  }
+
+  &__image {
+    background-color: #a0a0a0;
+    padding: 20px;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+}
