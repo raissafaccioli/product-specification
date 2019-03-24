@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductSpecificationComponent } from './product-specification/product-specification.component';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ProductSpecificationComponent } from './product-specification/product-s
     ProductSpecificationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
