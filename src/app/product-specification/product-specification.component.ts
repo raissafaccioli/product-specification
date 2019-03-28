@@ -12,30 +12,35 @@ export class ProductSpecificationComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
   
-  products: Product = {
+  product: Product = {
     _id: '1', 
     name: 'Coiso', 
+    price: 22.12,
     description: 'Bustrinca', 
     images: ['a', 'b', 'c'], 
     energeticValue: 12, 
     protein: 191
   };
+  
   constructor() { }
 
   ngOnInit() {
     this.galleryOptions = [
       {
-        width: '600px',
-        height: '400px',
-        thumbnailsColumns: 4,
-        imageAnimation: NgxGalleryAnimation.Slide
+        width: '100%',
+        height: '300px',
+        thumbnailsColumns: 3,
+        imageAnimation: NgxGalleryAnimation.Zoom,
+        arrowPrevIcon: 'fa fa-angle-left',
+        arrowNextIcon: 'fa fa-angle-right',
+        closeIcon: 'fa fa-times'
       },
       // max-width 800
       {
         breakpoint: 800,
         width: '100%',
         height: '600px',
-        imagePercent: 80,
+        imagePercent: 100,
         thumbnailsPercent: 20,
         thumbnailsMargin: 20,
         thumbnailMargin: 20
@@ -43,27 +48,36 @@ export class ProductSpecificationComponent implements OnInit {
       // max-width 400
       {
         breakpoint: 400,
-        preview: false
+        width: '100%',
+        height: '600px',
+        imagePercent: 100,
+        thumbnailsPercent: 20,
+        thumbnailsMargin: 20,
+        thumbnailMargin: 20
       }
     ];
 
     this.galleryImages = [
-        {
-            small: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3CuNzOrmWhos3MXI0v_KkyO_xrZ5Y8hFxSYGj_6OtUygZUUX',
-            medium: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3CuNzOrmWhos3MXI0v_KkyO_xrZ5Y8hFxSYGj_6OtUygZUUX',
-            big: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm3CuNzOrmWhos3MXI0v_KkyO_xrZ5Y8hFxSYGj_6OtUygZUUX'
-        },
-        {
-            small: 'https://www.w3schools.com/w3css/img_lights.jpg',
-            medium: 'https://www.w3schools.com/w3css/img_lights.jpg',
-            big: 'https://www.w3schools.com/w3css/img_lights.jpg'
-        },
-        {
-            small: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Sunflower_Helianthus_1_edited.png',
-            medium: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Sunflower_Helianthus_1_edited.png',
-            big: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Sunflower_Helianthus_1_edited.png'
-        }
+      {
+        small: 'assets/images/salsicha-vegana/lata.jpg',
+        medium: 'assets/images/salsicha-vegana/lata.jpg',
+        big: 'assets/images/salsicha-vegana/lata.jpg'
+      },
+      {
+        small: 'assets/images/salsicha-vegana/salsicha-vegetal.jpg',
+        medium: 'assets/images/salsicha-vegana/salsicha-vegetal.jpg',
+        big: 'assets/images/salsicha-vegana/salsicha-vegetal.jpg'
+      },
+      {
+        small: 'assets/images/salsicha-vegana/prato2.jpg',
+        medium: 'assets/images/salsicha-vegana/prato2.jpg',
+        big: 'assets/images/salsicha-vegana/prato2.jpg'
+      }
     ];
+  }
+
+  sendProduct(event) {
+    alert(event);
   }
 }
 

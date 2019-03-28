@@ -1,3 +1,5 @@
+@import '../../assets/scss/colors.scss';
+
 .product{
   padding: 10px;
   font-family: 'Roboto', sans-serif;
@@ -10,11 +12,45 @@
   }
 
   &__image {
-    background-color: #a0a0a0;
+    // background-color: #f0f5f2;
     padding: 20px;
   }
 
   &__description {
     margin-top: 10px;
   }
+
+  &__buy-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__buy-button {
+    background-color: $light-green;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: .7s;
+  }
+
+  &__buy-button:hover {
+    background-color: $dark-green;
+    color: $white;
+  }
+
+  /deep/ .ngx-gallery-thumbnail.ngx-gallery-active {  
+    width: 100%;  
+  }
+
+  /deep/ .ngx-gallery-icon {
+    color: #416b3370;
+  }
+
+  ngx-gallery /deep/ ngx-gallery-preview .ngx-gallery-arrow, 
+  ngx-gallery /deep/ ngx-gallery-preview .ngx-gallery-close {
+    color: $white;
+  }
+
 }
