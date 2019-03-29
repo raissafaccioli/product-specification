@@ -14,9 +14,9 @@ export class ProductSpecificationComponent implements OnInit {
   
   product: Product = {
     _id: '1', 
-    name: 'Coiso', 
-    price: 22.12,
-    description: 'Bustrinca', 
+    name: 'Carne Vegetal',
+    price: 16.50,
+    description: 'A linha de "Pratos Prontos", segue as mesmas propriedades das proteínas pré-cozidas de aliar saúde e qualidade de vida a alimentos rápidos que a rotina atual nos impõe. Um objetivo com a utilização de produtos 100% naturais que só a Superbom conseguiu atingir através da Soy Good. Sua formulação inclui o óleo de canola (riquíssimo em ômega-3), ácido alfalinolênico e ácido linoléico. Estão disponíveis nas versões “Molho Bolonhesa Vegetariano”, “Medalhão ao Molho Madeira”, “Almôndega Vegetariana ao Sugo”, "Jardineira ao Molho", "Cubinhos ao Molho Caseiro" e "Escalope ao Molho Caseiro".', 
     images: ['a', 'b', 'c'], 
     energeticValue: 12, 
     protein: 191
@@ -76,8 +76,13 @@ export class ProductSpecificationComponent implements OnInit {
     ];
   }
 
-  sendProduct(event) {
-    alert(event);
+  sendProduct(product: Product) {
+    console.log(product);
+    const buyElement = document.querySelector('buy-box');
+    if(buyElement != null) {
+      buyElement['message'] = product;
+      console.log(buyElement);
+    }
   }
 }
 

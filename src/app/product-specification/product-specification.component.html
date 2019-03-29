@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Pompiere|Quicksand|Thasadith|Roboto:300" rel="stylesheet">
 
 <div class="section product">
-  <div class="col-5">
+  <div class="col-12">
     <h4 class="product__title">Vegan Product Title</h4>
     <div class="product__image">
       <ngx-gallery [options]="galleryOptions" [images]="galleryImages" style="width: 100%"></ngx-gallery>
@@ -11,7 +11,7 @@
       Product description little text. Product description little text. Product description little text. Product description little text. Product description little text. 
     </p>
     <div class="product__buy-section">
-      <button class="product__buy-button" (click)="sendProduct($event)">Comprar</button>
+      <button class="product__buy-button" (click)="sendProduct(product)">Comprar</button>
     </div>
   </div>
 </div>
