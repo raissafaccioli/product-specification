@@ -76,7 +76,7 @@ export class ProductSpecificationComponent implements OnInit {
     ];
   }
 
-  sendProduct(product: Product) {
+  emitProduct(product: Product) {
     console.log(product);
     const buyElement = document.querySelector('buy-box');
     if(buyElement != null) {
